@@ -1,0 +1,25 @@
+[project]
+name = "skill-injection-poc"
+version = "0.1.0"
+description = "A pasted skill drives the agent's shell"
+requires-python = ">=3.11"
+dependencies = [
+    "google-adk",
+    "litellm",
+    "fastapi",
+    "uvicorn",
+    "python-dotenv",
+    "pyyaml",
+    "mcp",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+poc = "server:main"
+mcp-server = "mcp_server:main"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["agent.py", "agent_session.py", "func_tools.py", "mcp_server.py", "server.py"]

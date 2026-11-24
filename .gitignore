@@ -1,0 +1,17 @@
+# secrets
+.env
+
+# python
+.venv/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# editors / os
+.idea/
+.vscode/
+.DS_Store
+rcv.log
+leaked.jsonl
